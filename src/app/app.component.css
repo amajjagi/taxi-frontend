@@ -1,0 +1,7 @@
+.container {
+    height: calc(100vh - (var(--top-nav-height) + 16px));
+    /* background-color: #fff; */
+    position: fixed;
+    width: 100%;
+    top: calc(var(--top-nav-height) - 8px);
+}
