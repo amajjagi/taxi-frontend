@@ -3,5 +3,5 @@
     /* background-color: #fff; */
     position: fixed;
     width: 100%;
-    top: calc(var(--top-nav-height) - 8px);
+    top: var(--top-nav-height);
 }

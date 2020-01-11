@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 @font-face {
     font-family: Roboto-Light;
     src: url(assets/fonts/Roboto-Light.ttf);
@@ -21,7 +24,7 @@
   }
 
   :root {
-    --theme-color-primary: #f97c00;
+    --theme-color-primary: #3f51b5;
     --theme-sidebar-color: #263238;
     --text-color-heading: #37474f;
     --text-color-body: #535b64;
@@ -61,4 +64,13 @@ body {
   color: var(--text-color-body);
   background-color: #ededed;
   z-index: -2;
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 0 !important;
+}
+
+.mat-button-toggle-checked {
+  background-color: var(--theme-color-primary) !important;
+  color: #fff !important;
 }

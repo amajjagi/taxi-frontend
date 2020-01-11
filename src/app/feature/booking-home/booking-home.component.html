@@ -1,3 +1,38 @@
-<div class="container">
-    <p>booking-home works!</p>
-</div>
+<mat-card>
+    <div class="trip-option">
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style" value="oneway">
+            <mat-button-toggle value="oneway">One-Way</mat-button-toggle>
+            <mat-button-toggle value="roundtrip" disabled>Round-Trip</mat-button-toggle>
+            <mat-button-toggle value="multicity" disabled>Multi-City</mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+    <div class="flex-container">
+        <mat-form-field appearance="outline">
+            <mat-label>From</mat-label>
+            <mat-select  [(value)]="selected" disabled>
+                <mat-option *ngFor="let city of cities" [value]="city.name" >
+                    {{city.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>To</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let city of cities" [value]="city.name" [disabled]="city.name === 'Bengaluru'">
+                    {{city.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <input matInput [matDatepicker]="picker" placeholder="Depart date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <input matInput [matDatepicker]="pickerReturn" placeholder="Return date" disabled>
+            <mat-datepicker-toggle matSuffix [for]="pickerReturn"></mat-datepicker-toggle>
+            <mat-datepicker #pickerReturn></mat-datepicker>
+        </mat-form-field>
+        <button mat-flat-button color="primary">Book now</button>
+    </div>
+</mat-card>
