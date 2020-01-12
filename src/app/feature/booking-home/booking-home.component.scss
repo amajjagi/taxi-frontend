@@ -1,11 +1,13 @@
     mat-card {
         margin: 8px;
-
+        border-radius: 3px;
+        background-color: rgba(0,0,0,0.05);
+    
         .trip-option {
             margin: 16px 54px;
         }
         .flex-container{
-            background-color: #fff;
+            // background-color: #fff;
             align-items: center;
             display: flex;
             justify-content: space-evenly;

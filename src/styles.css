@@ -1,58 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~ngx-toastr/toastr';
 
 @font-face {
-    font-family: Roboto-Light;
-    src: url(assets/fonts/Roboto-Light.ttf);
-  }
-  @font-face {
-    font-family: Roboto-Regular;
-    src: url(assets/fonts/Roboto-Regular.ttf);
-  }
-  @font-face {
-    font-family: Roboto-Medium;
-    src: url(assets/fonts/Roboto-Medium.ttf);
-  }
-  @font-face {
-    font-family: Roboto-Bold;
-    src: url(assets/fonts/Roboto-Bold.ttf);
-  }
-  @font-face {
-    font-family: Roboto;
-    src: url(assets/fonts/Roboto-Regular.ttf);
-  }
+  font-family: Roboto-Light;
+  src: url(assets/fonts/Roboto-Light.ttf);
+}
 
-  :root {
-    --theme-color-primary: #3f51b5;
-    --theme-sidebar-color: #263238;
-    --text-color-heading: #37474f;
-    --text-color-body: #535b64;
-    --error-color: #f44336;
-    --theme-font-light: Roboto-Light;
-    --theme-font-regular: Roboto-Regular;
-    --theme-font-medium: Roboto-Medium;
-    --theme-font-bold: Roboto-Bold;
-    --top-nav-height: 57px;
-  }
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(assets/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Medium;
+  src: url(assets/fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(assets/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(assets/fonts/Roboto-Regular.ttf);
+}
+
+:root {
+  --theme-color-primary: #3f51b5;
+  --theme-sidebar-color: #263238;
+  --text-color-heading: #37474f;
+  --text-color-body: #535b64;
+  --error-color: #f44336;
+  --theme-font-light: Roboto-Light;
+  --theme-font-regular: Roboto-Regular;
+  --theme-font-medium: Roboto-Medium;
+  --theme-font-bold: Roboto-Bold;
+  --top-nav-height: 57px;
+}
 
 ::-webkit-scrollbar {
-    width: 8px;
-    cursor: pointer;
-    scroll-behavior: "smooth";
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #f0f0f0;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #ccc;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #8c8c8c;
-  }
+  width: 8px;
+  cursor: pointer;
+  scroll-behavior: "smooth";
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8c8c8c;
+}
 
 html,
 body {
@@ -64,6 +69,9 @@ body {
   color: var(--text-color-body);
   background-color: #ededed;
   z-index: -2;
+  background-image: url('src/assets/images/car.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .mat-form-field-wrapper {
@@ -73,4 +81,19 @@ body {
 .mat-button-toggle-checked {
   background-color: var(--theme-color-primary) !important;
   color: #fff !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 0.5em 0 1em 0 !important;
+}
+
+.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+  line-height: 40px !important;
+}
+
+.mat-button-toggle-disabled.mat-button-toggle-appearance-standard {
+  background: none !important;
+}
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: none !important;
 }

@@ -14,12 +14,18 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { CommonService } from './services/common.service';
 import { HttpClientModule } from '@angular/common/http'; 
+import { ReactiveFormsModule } from '@angular/forms';
+import { BookingDetailsComponent } from './feature/booking-details/booking-details.component';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
-    BookingHomeComponent
+    BookingHomeComponent,
+    BookingDetailsComponent
   ],
   imports: [
     HttpClientModule,
@@ -34,7 +40,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    ReactiveFormsModule,
+    MatDividerModule,
+    MatListModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     MatDatepickerModule,

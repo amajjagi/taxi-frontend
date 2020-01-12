@@ -10,6 +10,10 @@ export class CommonService {
     ) {}
 
     public getCities () {
-        return this.httpClient.get("https://api.myjson.com/bins/18h93q");
+        return this.httpClient.get("https://blooming-mountain-13531.herokuapp.com/cities");
+    }
+
+    public getBookingDetails(data) {
+        return this.httpClient.get(`https://blooming-mountain-13531.herokuapp.com/booking-details?from=${data.from}&to=${data.to}&departdate=${data.departdate}`)
     }
 }

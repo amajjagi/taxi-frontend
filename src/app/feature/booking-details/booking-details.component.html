@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{bookingDetails.from}} - {{bookingDetails.to}}</mat-card-title>
+    <mat-card-subtitle>Booking details</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>{{bookingDetails.distance}} Kms</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>{{bookingDetails.price}} Rupees</mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="onCancel()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="onConfirm()">Confirm</button>
+  </mat-card-actions>
+</mat-card>

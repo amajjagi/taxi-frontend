@@ -6,10 +6,10 @@
             <mat-button-toggle value="multicity" disabled>Multi-City</mat-button-toggle>
         </mat-button-toggle-group>
     </div>
-    <div class="flex-container">
+            <form [formGroup]="myForm" (ngSubmit)="getBookingDetails()" class="flex-container">
         <mat-form-field appearance="outline">
             <mat-label>From</mat-label>
-            <mat-select  [(value)]="selected" disabled>
+            <mat-select formControlName="from"  [(value)]="selected" disabled >
                 <mat-option *ngFor="let city of cities" [value]="city.name" >
                     {{city.name}}
                 </mat-option>
@@ -17,14 +17,14 @@
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>To</mat-label>
-            <mat-select>
+            <mat-select formControlName="to">
                 <mat-option *ngFor="let city of cities" [value]="city.name" [disabled]="city.name === 'Bengaluru'">
                     {{city.name}}
                 </mat-option>
             </mat-select>
         </mat-form-field>
         <mat-form-field appearance="outline">
-            <input matInput [matDatepicker]="picker" placeholder="Depart date">
+            <input formControlName="departdate" matInput [matDatepicker]="picker" placeholder="Depart date">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
@@ -33,6 +33,6 @@
             <mat-datepicker-toggle matSuffix [for]="pickerReturn"></mat-datepicker-toggle>
             <mat-datepicker #pickerReturn></mat-datepicker>
         </mat-form-field>
-        <button mat-flat-button color="primary">Book now</button>
-    </div>
+        <button mat-flat-button color="primary" type="submit" [disabled]="myForm.invalid">Book now</button>
+        </form>
 </mat-card>
