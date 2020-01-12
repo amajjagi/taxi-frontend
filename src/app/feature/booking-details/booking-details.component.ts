@@ -32,7 +32,7 @@ export class BookingDetailsComponent implements OnInit {
   }
 
   onCancel() {
-    this.toastrService.success('','Booking cancelled.');
+    this.toastrService.info('','Booking cancelled.');
     this.router.navigate(['/booking']);
   }
 }
