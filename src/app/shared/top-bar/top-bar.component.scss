@@ -5,12 +5,12 @@
     top: 0;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-    background-color: #fff;
+    background-color: var(--theme-color-primary);
     height: var(--top-nav-height);
     z-index: 10;   
 
     .app-logo {
-      color: var(--theme-color-primary);
+      color: #fff;
       margin: 0 16px;
       font-size: 1.6em;
       font-family: var(--theme-font-bold);

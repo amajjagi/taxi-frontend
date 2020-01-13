@@ -5,6 +5,7 @@ import { BookingHomeComponent } from './feature/booking-home/booking-home.compon
 import { BookingDetailsComponent } from './feature/booking-details/booking-details.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'booking', pathMatch: 'full' },
     { path: 'booking', component: BookingHomeComponent },
     { path: 'booking-details', component: BookingDetailsComponent }
   ];
